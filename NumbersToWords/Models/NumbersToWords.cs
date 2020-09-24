@@ -14,20 +14,19 @@ namespace NumbersToWords
     static public string NumberParser(string numberString)
     {
       string result;      
-      // Dictionary<string, string> singlesDict = new Dictionary<string, string>() { {"1","one"} };
-      // char[] numberArray = numberString.ToCharArray();
-      // if (numberArray.length = 1)
-      // {
-      //   if
-      // }
-      if (numberString == "1")
+      Dictionary<string, string> singlesDict = new Dictionary<string, string>() { {"1","one"},{"2","two"},{"3","three"},{"4","four"},{"5","five"},{"6","six"},{"7","seven"},{"8","eight"},{"9","nine"} };
+
+      Console.WriteLine("numberString: "+numberString);
+      if (singlesDict.TryGetValue(numberString, out string value))
       {
-        result = "one";
+        result = value;
+        Console.WriteLine("value: "+value);
       }
-      else
+      else 
       {
         result = "I have no idea what you mean.";
       }
+      Console.WriteLine("result: "+result);
       return result;
     }
   }

@@ -18,5 +18,11 @@ namespace NumbersToWords.Tests
     {
       Assert.AreEqual("five",Translator.NumberParser("5"));
     }
+
+    [TestMethod]
+    public void NumberParser_TranslateTeens_word()
+    {
+      Assert.AreEqual("thirteen",Translator.NumberParser("13"));
+    }
   }
 }
